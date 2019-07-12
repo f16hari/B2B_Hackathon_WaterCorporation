@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <% include ../components/head %>
+  
+</head>
+
+<body>
+
+  <div id="wrapper">
+    <!-- start header -->
+    <header>
+     <% include ../components/header %>
+    </header>
+    <!-- end header -->
+
+    <section id="inner-headline">
+      <div class="container">
+        <div class="row">
+          <div class="span4">
+            <div class="inner-heading">
+              <h2>Welcome Admin...</h2>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section id="content">
+      <div class="container">
+
+        <div class="row">
+        <h4>Pending Water Tanker Request</h4>
+
+        <%for(let i = 0; i < trequest.length; i++) {%>
+        <div class="span4" style="margin-top:10px;background-color:white;padding:10px" >
+                <p style='color:black;font-weight:bold'>Name : </p>
+                <p style="color:grey"><%= trequest[i].name%></p>
+                 <p style='color:black;font-weight:bold'>Contact : </p>
+                <p style="color:grey"><%= trequest[i].mobile%></p>
+                 <p style='color:black;font-weight:bold'>Category : </p>
+                <p style="color:grey"><%= trequest[i].category%></p>
+                 <p style='color:black;font-weight:bold'>Address : </p>
+                <p style="color:grey"><%= trequest[i].address%></p>
+                 <p style='color:black;font-weight:bold'>Time : </p>
+                <p style="color:grey"><%= trequest[i].log%></p>
+
+        </div> 
+                
+        <%}%>
+         
+            
+        </div>
+
+        <!-- divider -->
+        <div class="row">
+          <div class="span12">
+            <div class="solidline"></div>
+          </div>
+        </div>
+        <!-- end divider -->
+
+        <div class="row">
+        
+        <h4>Pending Sewage Tanker Request</h4>
+
+        <%for(let i = 0; i < srequest.length; i++) {%>
+        <div class="span4" style="margin-top:10px;background-color:white;padding:10px" >
+                <p style='color:black;font-weight:bold'>Name : </p>
+                <p style="color:grey"><%= srequest[i].name%></p>
+                 <p style='color:black;font-weight:bold'>Contact : </p>
+                <p style="color:grey"><%= srequest[i].mobile%></p>
+                 <p style='color:black;font-weight:bold'>Category : </p>
+                <p style="color:grey"><%= srequest[i].category%></p>
+                 <p style='color:black;font-weight:bold'>Address : </p>
+                <p style="color:grey"><%= srequest[i].address%></p>
+                 <p style='color:black;font-weight:bold'>Time : </p>
+                <p style="color:grey"><%= srequest[i].log%></p>
+
+         </div>
+                
+        <%}%>
+             
+         </div>
+         <div class="row">
+        
+        <h4>Important Negative Feedback</h4>
+
+        <%for(let i = 0; i < nfeed.length; i++) {%>
+        <div class="span4" style="margin-top:10px;background-color:white;padding:10px" >
+                <p style='color:black;font-weight:bold'>Feedback : </p>
+                <p style="color:grey"><%= nfeed[i].comment%></p>
+                 <p style='color:black;font-weight:bold'>Rating : </p>
+                <p style="color:grey"><%= nfeed[i].rating%></p>
+
+
+         </div>
+                
+        <%}%>
+             
+         </div>
+        </div>
+
+       </div>
+
+    </section>
+  	
+    <footer>
+      <% include ../components/footer %>
+    </footer>
+  </div>
+  <a href="#" class="scrollup"><i class="icon-angle-up icon-rounded icon-bglight icon-2x"></i></a>
+
+  <!-- javascript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="/public/assets/js/jquery.js"></script>
+  <script src="/public/assets/js/jquery.easing.1.3.js"></script>
+  <script src="/public/assets/js/bootstrap.js"></script>
+  <script src="/public/assets/js/modernizr.custom.js"></script>
+  <script src="/public/assets/js/toucheffects.js"></script>
+  <script src="/public/assets/js/google-code-prettify/prettify.js"></script>
+  <script src="/public/assets/js/jquery.prettyPhoto.js"></script>
+  <script src="/public/assets/js/portfolio/jquery.quicksand.js"></script>
+  <script src="/public/assets/js/portfolio/setting.js"></script>
+  <script src="/public/assets/js/animate.js"></script>
+
+  <!-- Template Custom JavaScript File -->
+  <script src="/public/assets/js/custom.js"></script>
+  <script>  
+ 
+  </script>
+
+</body>
+
+</html>

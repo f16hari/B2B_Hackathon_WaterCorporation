@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <% include ../components/head %>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+  <div id="wrapper">
+    <!-- start header -->
+    <header>
+     <% include ../components/header %>
+    </header>
+    <!-- end header -->
+
+    <section id="inner-headline">
+      <div class="container">
+        <div class="row">
+          <div class="span4">
+            <div class="inner-heading">
+              <h2>Book Sewage removal</h2>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonial py-5" id="testimonial">
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-4 py-5 bg-primary text-white text-center ">
+                <div class=" ">
+                    <div class="card-body">
+                        <img src="http://www.ansonika.com/mavia/img/registration_bg.svg" style="width:30%">
+                        <h2 class="py-3">Request Form</h2>
+                        <p>Please fill the form carefully with the correct details and you will receive an otp which will be used for the conformation.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 py-5 border">
+                <h4 class="pb-4">Please fill with your details</h4>
+                <form method="post" action="/booksewage">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <input id="Full Name" name="name" placeholder="Full Name" class="form-control" type="text" style="height:40px">
+                        </div>
+                        <div class="form-group col-md-6">
+                          <input type="email" name='email' class="form-control" id="inputEmail4" placeholder="Registered-Email...." style="height:40px">
+                        </div>
+                      </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input id="mobile" name="mobile" placeholder="Mobile No." class="form-control" required="required" type="text" style="height:40px">
+                        </div>
+                        <div class="form-group col-md-6">
+                                  
+                                  <select id="inputState" class="form-control" name='category'>
+                                    <option selected>Choose category...</option>
+                                    <option> Household</option>
+                                    <option> office</option>
+                                  </select>
+                        </div>
+                        <div class="form-group col-md-12">
+                                  <textarea id="comment" cols="40" rows="5" class="form-control" name="address" placeholder="Enter the address here.."></textarea>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <div class="form-group">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                                  <label class="form-check-label" for="invalidCheck2">
+                                    <small>By clicking Submit, you agree to our Terms & Conditions, Visitor Agreement and Privacy Policy.</small>
+                                  </label>
+                                </div>
+                              </div>
+                    
+                          </div>
+                    </div>
+                     
+                    <input type="submit" name="submit" class="btn btn-danger" value='Submit'>
+                    <div class="form-row">
+                       
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+  	
+    <footer>
+      <% include ../components/footer %>
+    </footer>
+  </div>
+  <a href="#" class="scrollup"><i class="icon-angle-up icon-rounded icon-bglight icon-2x"></i></a>
+
+  <!-- javascript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="/public/assets/js/jquery.js"></script>
+  <script src="/public/assets/js/jquery.easing.1.3.js"></script>
+  <script src="/public/assets/js/bootstrap.js"></script>
+  <script src="/public/assets/js/modernizr.custom.js"></script>
+  <script src="/public/assets/js/toucheffects.js"></script>
+  <script src="/public/assets/js/google-code-prettify/prettify.js"></script>
+  <script src="/public/assets/js/jquery.prettyPhoto.js"></script>
+  <script src="/public/assets/js/portfolio/jquery.quicksand.js"></script>
+  <script src="/public/assets/js/portfolio/setting.js"></script>
+  <script src="/public/assets/js/animate.js"></script>
+
+  <!-- Template Custom JavaScript File -->
+  <script src="/public/assets/js/custom.js"></script>
+  <script>  
+ 
+  </script>
+
+</body>
+
+</html>

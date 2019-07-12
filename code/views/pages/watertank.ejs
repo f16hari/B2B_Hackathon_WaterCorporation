@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <% include ../components/head %>
+</head>
+
+<body>
+
+  <div id="wrapper">
+    <!-- start header -->
+    <header>
+     <% include ../components/header %>
+    </header>
+    <!-- end header -->
+
+    <section id="inner-headline">
+      <div class="container">
+        <div class="row">
+          <div class="span4">
+            <div class="inner-heading">
+              <h2>Water Tank Levels</h2>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section id="content">
+      <div class="container">
+
+        <div class="row">
+          <%for(let i = 0; i < tank.length; i++) {%>
+          <div class="span6">
+            <div class="pricing-box-plain">
+              <div class="heading">
+                <h4><%= tank[i].area%></h4>
+                <span>in TMT</span>
+              </div>
+              <div id="<%= tank[i].area%>" style="width:100%;height:250px;" >
+               
+              </div>
+              
+            </div>
+          </div>
+          <%}%>
+        
+          
+        </div>
+
+        <!-- divider -->
+        <div class="row">
+          <div class="span12">
+            <div class="solidline"></div>
+          </div>
+        </div>
+        <!-- end divider -->
+
+
+       
+
+    </section>
+  	
+    <footer>
+      <% include ../components/footer %>
+    </footer>
+  </div>
+  <a href="#" class="scrollup"><i class="icon-angle-up icon-rounded icon-bglight icon-2x"></i></a>
+
+  <!-- javascript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="/public/assets/js/jquery.js"></script>
+  <script src="/public/assets/js/jquery.easing.1.3.js"></script>
+  <script src="/public/assets/js/bootstrap.js"></script>
+  <script src="/public/assets/js/modernizr.custom.js"></script>
+  <script src="/public/assets/js/toucheffects.js"></script>
+  <script src="/public/assets/js/google-code-prettify/prettify.js"></script>
+  <script src="/public/assets/js/jquery.prettyPhoto.js"></script>
+  <script src="/public/assets/js/portfolio/jquery.quicksand.js"></script>
+  <script src="/public/assets/js/portfolio/setting.js"></script>
+  <script src="/public/assets/js/animate.js"></script>
+
+  <!-- Template Custom JavaScript File -->
+  <script src="/public/assets/js/custom.js"></script>
+  <script>
+
+  <%for(let i = 0; i < tank.length; i++) {%>
+      TESTER = document.getElementById('<%= tank[i].area%>');
+data = {
+    x: [<%= tank[i].data.x%>],
+    y: [<%= tank[i].data.y%>] }
+Plotly.plot( TESTER, [data], { 
+    margin: { t: 0 } });
+
+  <%}%>
+  </script>
+
+</body>
+
+</html>
